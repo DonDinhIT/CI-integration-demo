@@ -1,0 +1,29 @@
+<h1>Listing sumary_scores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student</th>
+      <th>Score</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sumary_scores.each do |sumary_score| %>
+      <tr>
+        <td><%= sumary_score.student_id %></td>
+        <td><%= sumary_score.score %></td>
+        <td><%= link_to 'Show', sumary_score %></td>
+        <td><%= link_to 'Edit', edit_sumary_score_path(sumary_score) %></td>
+        <td><%= link_to 'Destroy', sumary_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sumary score', new_sumary_score_path %>

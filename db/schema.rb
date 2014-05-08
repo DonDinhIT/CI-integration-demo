@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507074608) do
+ActiveRecord::Schema.define(version: 20140508083209) do
 
   create_table "schools", force: true do |t|
     t.string   "name"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20140507074608) do
   create_table "students", force: true do |t|
     t.string   "name"
     t.integer  "school_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sumary_scores", force: true do |t|
+    t.integer  "student_id"
+    t.integer  "score"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

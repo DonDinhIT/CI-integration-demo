@@ -1,4 +1,6 @@
 CIIntegrationDemo::Application.routes.draw do
+  resources :sumary_scores
+
   resources :students
 
   resources :schools

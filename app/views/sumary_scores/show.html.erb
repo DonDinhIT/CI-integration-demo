@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @sumary_score.student_id %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @sumary_score.score %>
+</p>
+
+<%= link_to 'Edit', edit_sumary_score_path(@sumary_score) %> |
+<%= link_to 'Back', sumary_scores_path %>
